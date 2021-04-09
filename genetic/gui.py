@@ -4,7 +4,7 @@ from . import genetic_algo
 from genetic.generate_from_latent import generate_image
 
 class LatentHiker(tk.Frame):
-    def __init__(self, parent,population_size, G, *args, **kwargs):
+    def __init__(self, parent, population_size, G, *args, **kwargs):
         tk.Frame.__init__(self, parent, *args, **kwargs)
         self.parent = parent
         self.configure(background='black')
