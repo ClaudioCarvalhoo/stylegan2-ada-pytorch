@@ -1,8 +1,8 @@
-
 import random, time, copy
 import numpy as np
 from statistics import mean
 from genetic.generate_from_latent import create_random_vector
+
 
 class DNA:
     def __init__(self, G):
@@ -22,6 +22,7 @@ class DNA:
             mutation = random.random()
             if mutation < mutation_rate:
                 self.genes[0][i] = np.random.RandomState().randn()
+
 
 class Population:
     def __init__(self, G, population_size):
