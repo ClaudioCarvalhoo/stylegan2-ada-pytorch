@@ -21,11 +21,11 @@ def _generate_phenotypes(population, G, loading=None):
     phenotypes = []
     for individual in population.individuals:
             generated_image = generate_image(G, individual.genes)
-            slider = widgets.IntSlider(value=0, min=0, max=10, readout=False, layout=Layout(width="90%"))
+            slider = widgets.IntSlider(value=0, min=0, max=10, readout=False, layout=Layout(width="95%"))
             image = widgets.Image(
                 value=_image_to_byte_array(generated_image),
                 format="jpg",
-                width="90%",
+                width=256,
             )
             phenotype = widgets.VBox([image, slider])
             phenotypes.append(phenotype)
